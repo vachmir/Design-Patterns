@@ -5,6 +5,9 @@ using GoF_Design_Patterns.FactoryMethodPattern;
 using GoF_Design_Patterns.PrototypePattern;
 using GoF_Design_Patterns.SingletonPatternEx;
 
+using GoF_Design_Patterns.ProxyPattern;
+using GoF_Design_Patterns.DecoratorPattern;
+
 namespace GoF_Design_Patterns
 {
 
@@ -121,6 +124,31 @@ namespace GoF_Design_Patterns
             #endregion
 
             Console.WriteLine("###########################");
+
+
+
+            //Structural Patterns
+            Console.WriteLine("Structural Patterns");
+
+            #region Proxy Pattern
+            Console.WriteLine("***Proxy Pattern Demo***");
+            Proxy px = new Proxy();
+            px.DoSomeWork();
+            #endregion
+
+            #region Decorator Pattern
+            Console.WriteLine("***Decorator Pattern Simulation***");
+            ConcreteComponent cc = new ConcreteComponent();
+ 
+            ConcreteDecoratorEx1 decorator1 = new ConcreteDecoratorEx1();
+            decorator1.SetTheComponent(cc);
+            decorator1.MakeHouse();
+
+            ConcreteDecoratorEx2 decorator2 = new ConcreteDecoratorEx2();
+            //Adding results from decorator1
+            decorator2.SetTheComponent(decorator1);
+            decorator2.MakeHouse();
+            #endregion
 
             Console.Read();
         }
