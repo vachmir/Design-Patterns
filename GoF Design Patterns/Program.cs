@@ -7,6 +7,7 @@ using GoF_Design_Patterns.SingletonPatternEx;
 
 using GoF_Design_Patterns.ProxyPattern;
 using GoF_Design_Patterns.DecoratorPattern;
+using GoF_Design_Patterns.AdapterPattern;
 
 namespace GoF_Design_Patterns
 {
@@ -125,8 +126,6 @@ namespace GoF_Design_Patterns
 
             Console.WriteLine("###########################");
 
-
-
             //Structural Patterns
             Console.WriteLine("Structural Patterns");
 
@@ -148,6 +147,15 @@ namespace GoF_Design_Patterns
             //Adding results from decorator1
             decorator2.SetTheComponent(decorator1);
             decorator2.MakeHouse();
+            #endregion
+
+            #region Adapter Pattern
+
+            Console.WriteLine("***Adapter Pattern Demo***\n");
+            CalculatorAdapter cal = new CalculatorAdapter();
+            Triangle t = new Triangle(20, 10);
+            Console.WriteLine($"Area of Triangle is {cal.GetArea(t)} square unit");
+             
             #endregion
 
             Console.Read();
