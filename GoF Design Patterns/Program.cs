@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Text;
+
 using GoF_Design_Patterns.AbstractFactoryPattern;
 using GoF_Design_Patterns.BuilderPattern;
 using GoF_Design_Patterns.FactoryMethodPattern;
@@ -8,6 +10,8 @@ using GoF_Design_Patterns.SingletonPatternEx;
 using GoF_Design_Patterns.ProxyPattern;
 using GoF_Design_Patterns.DecoratorPattern;
 using GoF_Design_Patterns.AdapterPattern;
+using GoF_Design_Patterns.FacadePattern;
+using GoF_Design_Patterns.FlyweightPattern;
 
 namespace GoF_Design_Patterns
 {
@@ -135,6 +139,8 @@ namespace GoF_Design_Patterns
             px.DoSomeWork();
             #endregion
 
+            Console.WriteLine("###########################");
+
             #region Decorator Pattern
             Console.WriteLine("***Decorator Pattern Simulation***");
             ConcreteComponent cc = new ConcreteComponent();
@@ -149,16 +155,63 @@ namespace GoF_Design_Patterns
             decorator2.MakeHouse();
             #endregion
 
+            Console.WriteLine("###########################");
+
             #region Adapter Pattern
 
             Console.WriteLine("***Adapter Pattern Demo***\n");
             CalculatorAdapter cal = new CalculatorAdapter();
             Triangle t = new Triangle(20, 10);
             Console.WriteLine($"Area of Triangle is {cal.GetArea(t)} square unit");
-             
+
             #endregion
 
-            Console.Read();
+            Console.WriteLine("###########################");
+
+            #region Facade Pattern
+
+            Console.WriteLine("***Facade Pattern Demo***");
+            RobotFacade robotFacade1 = new RobotFacade(); // Creating Robots
+            robotFacade1.ConstructMilanoRobot();
+
+            RobotFacade robotFacade2 = new RobotFacade(); // Creating Robots
+            robotFacade2.ConstructRobonautRobot();
+
+            robotFacade1.DestroyMilanoRobot();            //Destroying Robots
+            robotFacade2.DestroyRobonautRobot();
+            #endregion
+
+            Console.WriteLine("###########################");
+
+            #region Flyweight Pattern
+            Console.WriteLine("***Flyweight Pattern Demo***");
+            RobotFactory myFactory = new RobotFactory();
+            IRobot shape = myFactory.GetRobotFromFactory("Small");
+            shape.Print();
+
+            //Creating small robots
+            for (int i = 0; i < 2; i++)
+            {
+                shape = myFactory.GetRobotFromFactory("Small");
+                shape.Print();
+            }
+
+            int numOfDistinctRobots = myFactory.TotalObjectsCreated;
+            Console.WriteLine($"Number of distinct robot objects is {numOfDistinctRobots}");
+
+            //Creating large robots
+            for (int i = 0; i < 5; i++)
+            {
+                shape = myFactory.GetRobotFromFactory("Large");
+                shape.Print();
+            }
+
+            numOfDistinctRobots = myFactory.TotalObjectsCreated;
+            Console.WriteLine($"Distinct robot objects created till now {numOfDistinctRobots}");
+            #endregion
+
         }
+
+
     }
 }

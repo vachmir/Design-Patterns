@@ -1,0 +1,16 @@
+C:\Users\vchgn\source\repos\Design Patterns\GoF Design Patterns\bin\Debug\net5.0\GoF Design Patterns.exe
+C:\Users\vchgn\source\repos\Design Patterns\GoF Design Patterns\bin\Debug\net5.0\GoF Design Patterns.deps.json
+C:\Users\vchgn\source\repos\Design Patterns\GoF Design Patterns\bin\Debug\net5.0\GoF Design Patterns.runtimeconfig.json
+C:\Users\vchgn\source\repos\Design Patterns\GoF Design Patterns\bin\Debug\net5.0\GoF Design Patterns.runtimeconfig.dev.json
+C:\Users\vchgn\source\repos\Design Patterns\GoF Design Patterns\bin\Debug\net5.0\GoF Design Patterns.dll
+C:\Users\vchgn\source\repos\Design Patterns\GoF Design Patterns\bin\Debug\net5.0\ref\GoF Design Patterns.dll
+C:\Users\vchgn\source\repos\Design Patterns\GoF Design Patterns\bin\Debug\net5.0\GoF Design Patterns.pdb
+C:\Users\vchgn\source\repos\Design Patterns\GoF Design Patterns\obj\Debug\net5.0\GoF Design Patterns.csprojAssemblyReference.cache
+C:\Users\vchgn\source\repos\Design Patterns\GoF Design Patterns\obj\Debug\net5.0\GoF Design Patterns.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\vchgn\source\repos\Design Patterns\GoF Design Patterns\obj\Debug\net5.0\GoF Design Patterns.AssemblyInfoInputs.cache
+C:\Users\vchgn\source\repos\Design Patterns\GoF Design Patterns\obj\Debug\net5.0\GoF Design Patterns.AssemblyInfo.cs
+C:\Users\vchgn\source\repos\Design Patterns\GoF Design Patterns\obj\Debug\net5.0\GoF Design Patterns.csproj.CoreCompileInputs.cache
+C:\Users\vchgn\source\repos\Design Patterns\GoF Design Patterns\obj\Debug\net5.0\GoF Design Patterns.dll
+C:\Users\vchgn\source\repos\Design Patterns\GoF Design Patterns\obj\Debug\net5.0\ref\GoF Design Patterns.dll
+C:\Users\vchgn\source\repos\Design Patterns\GoF Design Patterns\obj\Debug\net5.0\GoF Design Patterns.pdb
+C:\Users\vchgn\source\repos\Design Patterns\GoF Design Patterns\obj\Debug\net5.0\GoF Design Patterns.genruntimeconfig.cache
