@@ -12,6 +12,7 @@ using GoF_Design_Patterns.DecoratorPattern;
 using GoF_Design_Patterns.AdapterPattern;
 using GoF_Design_Patterns.FacadePattern;
 using GoF_Design_Patterns.FlyweightPattern;
+using GoF_Design_Patterns.CompositePattern;
 
 namespace GoF_Design_Patterns
 {
@@ -210,6 +211,62 @@ namespace GoF_Design_Patterns
             Console.WriteLine($"Distinct robot objects created till now {numOfDistinctRobots}");
             #endregion
 
+            Console.WriteLine("###########################");
+
+            #region Composite Pattern
+            #region Mathematics department
+            Console.WriteLine("***Composite Pattern***");
+            //2 Lecturers work in Mathematics department 
+            Employee mathLecturer1 = new Employee { Name = "M. Joy", Dept = "Mathematics", Designation = "Lecturer" };
+            Employee mathLecturer2 = new Employee { Name = "M. Ronny", Dept = "Mathematics", Designation = "Lecturer" };
+
+            //The college has Head of Department in Mathematics
+            CompositeEmployee hodMaths = new CompositeEmployee { Name = "Mrs. S. Das", Dept = "Maths", Designation = "HOD-Maths" };
+
+            //Lecturers of Mathematics directly perort to HOD-Maths
+            hodMaths.AddEmpployee(mathLecturer1);
+            hodMaths.AddEmpployee(mathLecturer2);
+            #endregion
+
+            #region Computer Science department
+            //3 lecturers work in Computer Sc. department
+            Employee cseLecturer1 = new Employee { Name = "C. Sam", Dept = "Computer Sciense", Designation = "Lecturer" };
+            Employee cseLecturer2 = new Employee { Name = "C. Jones", Dept = "Computer Sciense", Designation = "Lecturer" };
+            Employee cseLecturer3 = new Employee { Name = "C. Marium", Dept = "Computer Sciense", Designation = "Lecturer" };
+
+            //The College has a Head of Department in Computer science
+            CompositeEmployee hodCompSc = new CompositeEmployee { Name = "Mr. V. Sarcar", Dept = "Computer Sc.", Designation = "HOD-Computer Sc." };
+
+            //Lecturers of Computer Sc. directly reports to HOD-CSE
+            hodCompSc.AddEmpployee(cseLecturer1);
+            hodCompSc.AddEmpployee(cseLecturer2);
+            hodCompSc.AddEmpployee(cseLecturer3);
+            #endregion
+
+            #region Top level management
+            //College Principial
+            CompositeEmployee principal = new CompositeEmployee { Name="Dr.S.Som", Dept = "Planning-Supervising-Managing", Designation = "Principal" };
+
+            //Mead of Department of Math and Computer Sciense apply to Principal
+            principal.AddEmpployee(hodMaths);
+            principal.AddEmpployee(hodCompSc);
+            #endregion
+
+            Console.WriteLine("Details of a Principal are these: ");
+            principal.DisplayDetails();
+
+            Console.WriteLine("Details of HOD object are these: ");
+            hodCompSc.DisplayDetails();
+
+            Console.WriteLine("Details of individual employee are these: ");
+            mathLecturer1.DisplayDetails();
+
+            //Lecturer leaves
+            hodCompSc.RemoveEmployee(cseLecturer2);
+            Console.WriteLine("After resignstion there are only these leecturers");
+            principal.DisplayDetails();
+
+            #endregion
         }
 
 
