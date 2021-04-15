@@ -265,7 +265,7 @@ namespace GoF_Design_Patterns
             hodCompSc.RemoveEmployee(cseLecturer2);
             Console.WriteLine("After resignstion there are only these leecturers");
             principal.DisplayDetails();
-
+            //as
             #endregion
         }
 
