@@ -12,6 +12,7 @@ using GoF_Design_Patterns.DecoratorPattern;
 using GoF_Design_Patterns.AdapterPattern;
 using GoF_Design_Patterns.FacadePattern;
 using GoF_Design_Patterns.FlyweightPattern;
+using GoF_Design_Patterns.CompositePattern;
 
 namespace GoF_Design_Patterns
 {
@@ -210,7 +211,6 @@ namespace GoF_Design_Patterns
             Console.WriteLine($"Distinct robot objects created till now {numOfDistinctRobots}");
             #endregion
 
-<<<<<<< HEAD
             Console.WriteLine("###########################");
 
             #region Composite Pattern
@@ -267,8 +267,6 @@ namespace GoF_Design_Patterns
             principal.DisplayDetails();
             //as
             #endregion
-=======
->>>>>>> parent of be8fd1b (Added Composite Pattern)
         }
 
 
